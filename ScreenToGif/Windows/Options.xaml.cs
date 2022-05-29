@@ -21,6 +21,7 @@ using ScreenToGif.Domain.Enums;
 using ScreenToGif.Native.Helpers;
 using ScreenToGif.Util;
 using ScreenToGif.Util.InterProcessChannel;
+using ScreenToGif.Util.Native;
 using ScreenToGif.Util.Settings;
 using ScreenToGif.ViewModel.ExportPresets;
 using ScreenToGif.ViewModel.Tasks;
@@ -1302,7 +1303,7 @@ public partial class Options : Window, INotification
 
         if (!string.IsNullOrWhiteSpace(adjusted) && File.Exists(adjusted))
         {
-            Native.Helpers.Other.ShowFileProperties(Path.GetFullPath(adjusted));
+            Util.Native.Other.ShowFileProperties(Path.GetFullPath(adjusted));
             return;
         }
 
@@ -1404,7 +1405,7 @@ public partial class Options : Window, INotification
 
         if (!string.IsNullOrWhiteSpace(adjusted) && File.Exists(adjusted))
         {
-            Native.Helpers.Other.ShowFileProperties(Path.GetFullPath(adjusted));
+            Util.Native.Other.ShowFileProperties(Path.GetFullPath(adjusted));
             return;
         }
 
